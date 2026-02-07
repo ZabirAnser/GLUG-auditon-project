@@ -1,0 +1,483 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+/* Top Navigation Bar Styling */
+.top-nav {
+    background-color: #f3f3f3;
+    padding: 8px 20px;
+    text-align: right;
+}
+
+.top-menu {
+    display: inline-flex;
+    list-style: none;
+}
+
+.top-menu li {
+    margin-left: 15px;
+}
+
+.top-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.top-menu a:hover {
+    color: #666;
+}
+
+/* Main Navigation Bar Styling */
+.navbar {
+    display: flex;
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    height: 79.8px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 550;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #666;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    padding: 8px 20px;
+    border: none;
+    background-color: #f3f3f3;
+    border-radius: 50px;
+    width: 200px;
+    margin-right: 15px;
+}
+
+.icon {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #666;
+}
+
+/* Thin Top Info Bar Styling */
+.top-bar {
+    background-color: #ececec;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.top-bar a {
+    color: #666;
+    text-decoration: underline;
+}
+
+/* Hero Banner Section Styling */
+
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Background Video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Content Container */
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  z-index: 1;
+}
+
+/* Heading */
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Paragraph */
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons button {
+  padding: 10px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #eee;
+}
+
+
+/* Featured Cards Section Styling */
+.featured {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.featured h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    overflow: hidden;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .label {
+    font-size: 14px;
+    color: #666;
+    padding: 10px 15px 0;
+}
+
+.card h3 {
+    font-size: 24px;
+    padding: 0 15px;
+}
+
+.card button {
+    margin: 10px 15px;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #eee;
+}
+
+/* Shop By Sport Section Styling */
+.shop-by-sport {
+    padding: 40px 20px;
+}
+
+.shop-by-sport h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sports-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 24px;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;   /* smooth scroll */
+}
+
+
+.sports-row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.sport-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+
+.sport-item img {
+    width: 450px;
+    height: 563px;      /* increase this */
+    object-fit: cover;  /* keeps image nice */
+    border-radius: 10px;
+}
+
+
+.sport-item p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Nike App Banner Section Styling */
+.app-banner {
+    background-color: #f5f2ed;
+    padding: 1px;
+    text-align: center;
+}
+
+.app-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.app-logo {
+    height: 30px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+
+.app-banner h3 {
+    font-size: 64px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.qr-placeholder {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+    background-color: #fff;
+}
+
+.qr-placeholder img {
+    width: 79px;
+    height: 79px;
+    object-fit: contain;
+}
+
+
+/* Main Container - Keeps content centered and constrained */
+.spotlight {
+    max-width: 1400px;  /* Key Fix: Prevents full-width stretching */
+    margin: 0 auto;     /* Centers the container */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+.spotlight h2 {
+    font-size: 42px;    /* Slightly larger to match the bold header */
+    font-weight: 900;   /* Extra bold */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: -1px; /* Tighter spacing for that modern look */
+}
+
+.spotlight p {
+    font-size: 18px;
+    margin-bottom: 50px; /* Adds breathing room before the grid */
+    color: #333;
+}
+
+/* Grid Layout */
+/* Default to 2 items on mobile */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* On screens larger than 1024px, switch to 8 items */
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+/* Item Styling */
+.grid-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures content is centered in the cell */
+}
+
+/* Image Control - Prevents the "Enlarged" look */
+.grid-item img {
+    width: 100%;
+    max-width: 120px;   /* Key Fix: Stops images from becoming giant */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+/* Footer Styling */
+.footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+.footer a {
+    color: #666;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Basic Responsiveness with Media Queries */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu li {
+        margin: 10px 10px;
+    }
+
+    .right-menu .search {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .app-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .buttons button {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .top-menu {
+        justify-content: center;
+    }
+}
