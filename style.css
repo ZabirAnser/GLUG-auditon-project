@@ -12,11 +12,15 @@ body {
     line-height: 1.5;
 }
 
-/* Top Navigation Bar Styling */
+/* =========================================
+   2. TOP NAVIGATION (The thin strip)
+   ========================================= */
 .top-nav {
-    background-color: #f3f3f3;
-    padding: 8px 20px;
+    background-color: #f5f5f5;
+    padding: 8px 24px;
     text-align: right;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .top-menu {
@@ -30,167 +34,171 @@ body {
 
 .top-menu a {
     text-decoration: none;
-    color: #000;
-    font-size: 14px;
+    color: #111;
     transition: color 0.3s;
 }
 
 .top-menu a:hover {
-    color: #666;
+    color: #757575;
 }
 
-/* Main Navigation Bar Styling */
+/* =========================================
+   3. MAIN NAVBAR
+   ========================================= */
 .navbar {
     display: flex;
-    height: 65px;
+    min-height: 60px;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eee;
+    padding: 0 24px;
+    position: sticky; /* Sticks to top on scroll */
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    height: 79.8px;
+    height: 60px; /* Reduced slightly for better fit */
+    width: auto;
+    display: block;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    flex: 1;
-    justify-content: center;
-}
-
-.menu li {
-    margin: 0 15px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .menu a {
     text-decoration: none;
-    color: #000;
-    font-weight: 550;
-    font-size: 15px;
-    transition: color 0.3s;
+    color: #111;
+    font-weight: 600;
+    font-size: 16px;
+    transition: border-bottom 0.2s;
 }
 
 .menu a:hover {
-    color: #666;
+    border-bottom: 2px solid #111;
 }
 
 .right-menu {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 .search {
-    padding: 8px 20px;
+    padding: 8px 40px 8px 16px; /* Space for icon */
     border: none;
-    background-color: #f3f3f3;
-    border-radius: 50px;
-    width: 200px;
-    margin-right: 15px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    width: 180px;
+    transition: width 0.3s;
+}
+
+.search:focus {
+    width: 220px; /* Expands when clicked */
+    background-color: #e5e5e5;
+    outline: none;
 }
 
 .icon {
-    margin-left: 15px;
     text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    transition: color 0.3s;
+    color: #111;
+    font-size: 22px;
 }
 
-.icon:hover {
-    color: #666;
-}
-
-/* Thin Top Info Bar Styling */
+/* =========================================
+   4. INFO BAR (Top Bar)
+   ========================================= */
 .top-bar {
-    background-color: #ececec;
+    background-color: #f5f5f5;
     text-align: center;
-    padding: 8px 0;
-    font-size: 12px;
-    color: #666;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #111;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .top-bar a {
-    color: #666;
+    color: #111;
+    font-weight: 600;
     text-decoration: underline;
 }
 
-/* Hero Banner Section Styling */
-
+/* =========================================
+   5. HERO SECTION
+   ========================================= */
 .hero {
-  position: relative;
-  height: 60vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
+    position: relative;
+    height: 80vh; /* Takes up 80% of screen height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Push text to bottom like Nike site */
+    align-items: flex-start;
+    text-align: left;
+    color: #fff;
+    padding: 40px;
 }
 
-/* Background Video */
 .hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
 }
 
-/* Dark Overlay */
 .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Slight overlay for readability */
+    z-index: -1;
 }
 
-/* Content Container */
 .hero-content {
-  position: relative;
-  max-width: 800px;
-  z-index: 1;
+    position: relative;
+    max-width: 600px;
+    z-index: 1;
 }
 
-/* Heading */
 .hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+    font-size: 4rem; /* Responsive unit */
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 15px;
 }
 
-/* Paragraph */
 .hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: 500;
 }
 
-/* Buttons */
 .buttons button {
-  padding: 10px 30px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 50px;
-  background-color: #fff;
-  color: #000;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 10px 24px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .buttons button:hover {
-  background-color: #eee;
+    transform: scale(1.05);
 }
-
 
 /* Featured Cards Section Styling */
 .featured {
