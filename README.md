@@ -1,3 +1,3 @@
-# GLUG-auditon-project
+# NIKE landing page
 
-Nike landing page
+GLUG-auditon-project
